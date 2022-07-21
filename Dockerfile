@@ -33,11 +33,11 @@ RUN chmod +x /usr/local/bin/install-php-extensions && sync && \
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Add user for laravel application
-RUN addgroup -g 1000 -S www && \
-    adduser -u 1000 -S www -G www
+# RUN addgroup -g 1000 -S www && \
+#     adduser -u 1000 -S www -G www
 
 # Copy code to /var/www
-COPY --chown=www:www-data . /var/www
+COPY --chown=www-data:www-data . /var/www
 
 # add root to www group
 RUN chmod -R ug+w /var/www/storage
