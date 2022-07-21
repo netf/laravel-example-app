@@ -44,6 +44,8 @@ RUN chmod -R ug+w /var/www/storage
 
 # Set permissions for cache
 RUN chmod -R 777 /var/www/bootstrap/cache
+# Set permissions for logs
+RUN chmod -R 777 /var/www/storage/logs
 
 # Copy nginx/php/supervisor configs
 RUN cp docker/supervisor.conf /etc/supervisord.conf
