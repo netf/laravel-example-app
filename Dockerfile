@@ -27,7 +27,7 @@ ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/do
 
 # Install php extensions
 RUN chmod +x /usr/local/bin/install-php-extensions && sync && \
-    install-php-extensions mbstring pdo_mysql pdo_pgsql zip exif pcntl gd memcached
+    install-php-extensions mbstring pdo_mysql pdo_pgsql zip exif pcntl memcached
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
