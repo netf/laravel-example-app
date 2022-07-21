@@ -43,7 +43,7 @@ COPY --chown=www:www-data . /var/www
 RUN chmod -R ug+w /var/www/storage
 
 # Set permissions for cache
-RUN chmod -R 777 var/www/bootstrap/cache
+RUN chmod -R 777 /var/www/bootstrap/cache
 
 # Copy nginx/php/supervisor configs
 RUN cp docker/supervisor.conf /etc/supervisord.conf
