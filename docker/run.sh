@@ -3,9 +3,7 @@
 cd /var/www
 
 # php artisan migrate:fresh --seed
-php artisan cache:clear
-php artisan route:cache
-
-chmod www-data:www-data -R /var/www/storage/logs
+su www -c "php artisan cache:clear"
+su www -c "php artisan route:cache"
 
 /usr/bin/supervisord -c /etc/supervisord.conf
