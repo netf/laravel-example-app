@@ -1,6 +1,7 @@
 #!/bin/sh
 
 cd /var/www
+setfacl -d -m group:www-data:rwx /var/www/storage/logs
 
 # php artisan migrate:fresh --seed
 php artisan cache:clear

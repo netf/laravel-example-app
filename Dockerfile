@@ -45,7 +45,6 @@ RUN chmod -R ug+w /var/www/storage
 
 # Set permissions for cache and logs
 RUN chmod -R 775 /var/www/bootstrap/cache /var/www/storage/logs
-RUN setfacl -d -m group:www-data:rwx /var/www/storage/logs
 
 
 # Copy nginx/php/supervisor configs
