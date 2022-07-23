@@ -1,7 +1,7 @@
 #!/bin/sh
 
 cd /var/www
-# set laravel.log readable/writable for www-data group
+# set all files created in /var/www/storage/logs readable/writable by www-data group
 setfacl -d -m group:www-data:rwx /var/www/storage/logs
 
 # php artisan migrate:fresh --seed
