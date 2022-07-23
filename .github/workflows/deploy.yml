@@ -9,8 +9,8 @@ on:
 env:
   AWS_REGION: eu-west-1
   ECR_REPOSITORY: laravel-example-app
-  ECS_SERVICE: helloworld
-  ECS_CLUSTER: arghul-dev-ecs
+  SERVICE_NAME: helloworld
+  CLUSTER_NAME: arghul-dev-ecs
   CONTAINER_NAME: helloworld
 
 jobs:
